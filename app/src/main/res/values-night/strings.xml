@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="owl">Owl</string>
+    <string name="species">Species:</string>
+    <string name="diet">Diet:</string>
+    <string name="lorem">Lorem…</string>
+    <string name="food">Food:</string>
+    <string name="small_rodent_like_mammals_such_as_mice">Small, rodent-like mammals, such as mice</string>
+    <string name="age">Age:</string>
+    <string name="_5_years">5 years</string>
+    <string name="weight">Weight:</string>
+    <string name="_24_5">24.5</string>
+    <string name="habitat">Habitat:</string>
+    <string name="asia">Asia</string>
+    <string name="all_species">All</string>
+    <string name="amphibians">Amphibians</string>
+    <string name="birds">Birds</string>
+    <string name="fish">Fish</string>
+    <string name="mammals">Mammals</string>
+    <string name="reptiles">Reptiles</string>
+    <string name="carnivores">Carnivores</string>
+    <string name="herbivores">Herbivores</string>
+    <string name="omnivores">Omnivores</string>
+    <string name="animal_photo">Animal photo</string>
+</resources>

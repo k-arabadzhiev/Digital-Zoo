@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/animalsFragment">
+
+    <fragment
+        android:id="@+id/animalsFragment"
+        android:label="@string/app_name"
+        android:name="com.pollux.digitalzoo.features.animals.AnimalsFragment"
+        tools:layout="@layout/animals_fragment" >
+        <action
+            android:id="@+id/action_animalsFragment_to_animalDetailsFragment"
+            app:destination="@id/animalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pollux.digitalzoo.features.user.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment"/>
+    <fragment
+        android:id="@+id/addEditAnimalFragment"
+        android:name="com.pollux.digitalzoo.features.user.AddEditAnimalFragment"
+        android:label="{title}"
+        tools:layout="@layout/add_edit_animal_fragment">
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Add Animal" />
+        <argument
+            android:name="animal"
+            app:argType="com.pollux.digitalzoo.data.Animal"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalDetailsFragment"
+        android:name="com.pollux.digitalzoo.features.animals.AnimalDetailsFragment"
+        android:label="{animal_name}"
+        tools:layout="@layout/animal_details_fragment">
+        <argument
+            android:name="animal_name"
+            app:argType="string"
+            android:defaultValue="Add Animal" />
+        <argument
+            android:name="animal"
+            app:argType="com.pollux.digitalzoo.data.Animal" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalSearchFragment"
+        android:name="com.pollux.digitalzoo.features.search.AnimalSearchFragment"
+        tools:layout="@layout/animal_search_fragment">
+        <action
+            android:id="@+id/action_animalSearchFragment_to_animalDetailsFragment"
+            app:destination="@id/animalDetailsFragment" />
+        <action
+            android:id="@+id/action_animalSearchFragment_to_addEditAnimalFragment"
+            app:destination="@id/addEditAnimalFragment" />
+    </fragment>
+</navigation>

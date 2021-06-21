@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="112dp">
+
+    <ImageView
+        android:id="@+id/animal_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="6dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/owl" />
+
+    <TextView
+        android:id="@+id/animal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/animal_photo"
+        android:paddingTop="6dp"
+        android:paddingStart="10dp"
+        android:text="Owl"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/animal_species"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/animal_name"
+        android:layout_marginBottom="6dp"
+        android:layout_toEndOf="@id/animal_photo"
+
+        android:paddingStart="10dp"
+        android:text="Bird"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:text="Edit" />
+
+
+</RelativeLayout>

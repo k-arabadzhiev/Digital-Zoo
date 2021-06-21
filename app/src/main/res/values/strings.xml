@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Digital Zoo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="retry">Retry</string>
+    <string name="add_animal_button">Add Animal</string>
+    <string name="edit_animal_button">Edit Animal</string>
+    <string name="owl">Owl</string>
+    <string name="species">Species:</string>
+    <string name="diet">Diet:</string>
+    <string name="lorem">Lorem…</string>
+    <string name="food">Food:</string>
+    <string name="small_rodent_like_mammals_such_as_mice">Small, rodent-like mammals, such as mice</string>
+    <string name="age">Age:</string>
+    <string name="_5_years">5 years</string>
+    <string name="weight">Weight:</string>
+    <string name="_24_5">24.5</string>
+    <string name="habitat">Habitat:</string>
+    <string name="asia">Asia</string>
+    <string name="all_species">All</string>
+    <string name="amphibians">Amphibians</string>
+    <string name="birds">Birds</string>
+    <string name="fish">Fish</string>
+    <string name="mammals">Mammals</string>
+    <string name="reptiles">Reptiles</string>
+    <string name="all_diet">All</string>
+    <string name="carnivores">Carnivores</string>
+    <string name="herbivores">Herbivores</string>
+    <string name="omnivores">Omnivores</string>
+    <string name="animal_photo">Animal photo</string>
+</resources>

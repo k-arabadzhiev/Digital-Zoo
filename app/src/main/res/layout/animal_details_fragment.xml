@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.animals.AnimalDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:transitionName="transition_animal_detail"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                tools:layout_height="270dp"
+                tools:layout_width="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_height="match_parent"
+                    tools:layout_width="match_parent">
+
+                    <ImageView
+                        android:id="@+id/animal_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="false"
+                        tools:scaleType="centerCrop"
+                        android:contentDescription="@string/animal_photo"
+                        tools:src="@drawable/owl" />
+
+                    <!-- These are shared views that need to be here otherwise
+                         the up(back) animation will fail, I couldn't find a better fix -->
+
+                    <TextView
+                        android:id="@+id/animal_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/animal_species_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/animal_image" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/animal_name_id"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/owl"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/species_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/species"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_species"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/species_label"
+                    android:text="@string/birds"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/diet_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diet"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_diet"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/diet_label"
+                    android:text="@string/carnivores"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/animal_info"
+                style="@style/TextAppearance.MaterialComponents.Headline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minLines="4"
+                android:text="@string/lorem"
+                android:textAlignment="viewStart"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/food_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/food"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_food"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/food_label"
+                    android:text="@string/small_rodent_like_mammals_such_as_mice"
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/age_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_age"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/age_label"
+                    android:text="@string/_5_years"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/weight_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_weight"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/weight_label"
+                    android:text="@string/_24_5"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/habitat_label"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/habitat"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/animal_habitat"
+                    style="@style/TextAppearance.MaterialComponents.Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/habitat_label"
+                    android:text="@string/asia"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
